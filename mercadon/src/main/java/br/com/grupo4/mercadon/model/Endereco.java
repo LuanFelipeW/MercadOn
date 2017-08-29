@@ -16,7 +16,7 @@ public class Endereco {
 	private PessoaFisica pessoaFisica;
 	
 	
-	//MÉTODO CONSTRUTOR:
+	//MÉTODO CONSTRUTORs:
 	public Endereco(Integer codigo, String cep, String rua, String bairro, String numero, String cidade, String estado,
 			String telefone, String complemento, PessoaJuridica pessoaJuridica, PessoaFisica pessoaFisica) {
 		super();
