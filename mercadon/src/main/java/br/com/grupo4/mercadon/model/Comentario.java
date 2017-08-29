@@ -2,7 +2,7 @@ package br.com.grupo4.mercadon.model;
 
 import java.util.Date;
 
-public class FeedBack {
+public class Comentario {
 	//ATRIBUTO
 	private Integer codigo;
 	private String comentario;
@@ -13,7 +13,7 @@ public class FeedBack {
 	private Produto produto;
 	
 	//MÉTODO CONSTRUTOR	
-	public FeedBack(Integer codigo, String comentario, Integer avaliacao, Date data, String nome,
+	public Comentario(Integer codigo, String comentario, Integer avaliacao, Date data, String nome,
 			PessoaJuridica mercado, Produto produto) {
 		super();
 		this.codigo = codigo;
