@@ -1,4 +1,4 @@
-package br.com.mercadon.mercadon.model;
+package br.com.grupo4.mercadon.model;
 
 import java.util.Date;
 
