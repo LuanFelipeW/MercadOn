@@ -14,9 +14,12 @@ import br.com.grupo4.mercadon.model.PessoaFisica;
 public class CarrinhoDAO {
 private final Connection conn;
 	
+
 	public CarrinhoDAO(Connection con) {
 		this.conn = con;
 	}
+	
+	
 	public boolean inserir(Carrinho carrinho) throws SQLException{
 		String sql = "INSERT INTO CARRINHO (CAR_CODIGO, CAR_QUANTIDADE, CAR_VALOR_TOTAL, CAR_CLIENTE) VALUES (SEQ_CARRINHO.nextval, ?, ?, ?)";
 		 
@@ -37,6 +40,7 @@ private final Connection conn;
 		 
 		return statement.executeUpdate() > 0;
 	}
+	
 
 	public List<Carrinho> lista() throws SQLException {
 		List<Carrinho> lCarrinho = new ArrayList<>();
@@ -58,13 +62,9 @@ private final Connection conn;
 					Carrinho carrinho = new Carrinho(codigo, quantidade, valorTotal,pessoaFisica);
 					lCarrinho.add(carrinho);
 					
-					
 				}
 			}
 		}
-
 		return lCarrinho;
-		
-
 	}
 }
