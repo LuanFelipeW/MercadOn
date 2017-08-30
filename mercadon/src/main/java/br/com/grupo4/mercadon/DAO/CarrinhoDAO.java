@@ -1,4 +1,4 @@
-package br.com.grupo4.mercadon.DAO;
+package br.com.grupo4.mercadon.DAO; 
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -8,6 +8,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.grupo4.mercadon.model.Carrinho;
+import br.com.grupo4.mercadon.model.PessoaFisica;
+
 
 public class CarrinhoDAO {
 private final Connection conn;
@@ -26,18 +28,9 @@ private final Connection conn;
 		return statement.executeUpdate() > 0;
 	}
 	
-	public boolean alterar(Integer codigo, String nome) throws SQLException{
-		String sql = "UPDATE CARRINHO SET CAC_NOME = ? WHERE CAC_CODIGO = ?";
-		 
-		PreparedStatement statement = conn.prepareStatement(sql);
-		statement.setString(1, nome);
-		statement.setInt(2, codigo);
-		 
-		return statement.executeUpdate() > 0;
-	}
 	
-	public boolean excluir(Integer codigo) throws SQLException{
-		String sql = "DELETE CACHORRO WHERE CAC_CODIGO = ?";
+	public boolean apagar(Integer codigo) throws SQLException{
+		String sql = "DELETE CARRINHO WHERE CAR_CODIGO = ?";
 		 
 		PreparedStatement statement = conn.prepareStatement(sql);
 		statement.setInt(1, codigo);
@@ -45,26 +38,32 @@ private final Connection conn;
 		return statement.executeUpdate() > 0;
 	}
 
-	public List<Cachorro> lista() throws SQLException {
-		List<Cachorro> lCachorros = new ArrayList<>();
+	public List<Carrinho> lista() throws SQLException {
+		List<Carrinho> lCarrinho = new ArrayList<>();
 
-		String sql = "select * from CACHORRO";
+		String sql = "SELECT CO.CAR_CODIGO, CO.CAR_QUANTIDADE, CO.CAR_VALOR_TOTAL, CO.CAR_CLIENTE";
+		sql += "CO.PEF_NOME";
+		sql += " FROM CARRINHO CO ";
+		sql += " INNER JOIN PESSOAFISICA PF ON (CO.CAR_CLIENTE = PF.PEF_CODIGO) ";
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			stmt.execute();
 			try (ResultSet rs = stmt.getResultSet()) {
 				while (rs.next()) {
-					int codigo = rs.getInt("CAC_CODIGO");
-					String nome = rs.getString("CAC_NOME");
-					String cor = rs.getString("CAC_COR");
-					int qtdPtas = rs.getInt("CAC_QTD_PATAS");
-					String som = rs.getString("CAC_SOM");
-					Cachorro cachorro = new Cachorro(codigo, nome, cor, qtdPtas, som);
-					lCachorros.add(cachorro);
+					int codigo = rs.getInt(1);
+					int quantidade = rs.getInt(2);
+					double valorTotal = rs.getDouble(3);
+					int codigoPf =  rs.getInt(4);
+					String nomeCliente = rs.getString(5);
+					PessoaFisica pessoaFisica = new PessoaFisica(codigoPf,nomeCliente);
+					Carrinho carrinho = new Carrinho(codigo, quantidade, valorTotal,pessoaFisica);
+					lCarrinho.add(carrinho);
+					
+					
 				}
 			}
 		}
 
-		return lCachorros;
+		return lCarrinho;
 
 	}
 }

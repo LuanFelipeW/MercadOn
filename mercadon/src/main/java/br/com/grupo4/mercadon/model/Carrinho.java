@@ -18,6 +18,10 @@ public class Carrinho {
 		this.precoTotal = precoTotal;
 		this.pessoaFisica = pessoaFisica;
 	}
+	
+	public Carrinho() {
+		
+	}
 
 
 	//GETTER E SETTER:
