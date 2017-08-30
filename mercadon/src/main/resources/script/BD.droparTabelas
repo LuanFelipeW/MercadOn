@@ -1,3 +1,8 @@
+/*
+Caso necessário Dropar alguma tabela, os códigos estão prontos abaixo.
+OBS: Para dropar alguma tabela, a mesma não pode possuir nenhuma ligação com outra tabela (CONSTRAINT FOREIGN KEY).
+*/
+
 ALTER TABLE PESSOAFISICA
 DROP CONSTRAINT FK_PEF_PESSOAJURIDICA;
 

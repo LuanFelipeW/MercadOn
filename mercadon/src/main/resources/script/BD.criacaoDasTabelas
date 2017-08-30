@@ -1,3 +1,8 @@
+/*
+Criação de todas as tabelas do Bando De Dados,
+juntamente com suas FKs e SEQUENCE.
+*/
+
 ----------------- CRIANDO TABELA PESSOAJURIDICA E SEQUENCE ---------------------
 
 CREATE TABLE PESSOAJURIDICA (
