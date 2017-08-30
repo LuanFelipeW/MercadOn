@@ -25,6 +25,12 @@ public class PessoaFisica {
 		this.pessoaJuridica = pessoaJuridica;
 	}
 
+	
+	public PessoaFisica(int codigo, String nome) {
+		this.codigo = codigo;
+		this.nome = nome;
+	}
+
 	// GETTER E SETTER
 	public Integer getCodigo() {
 		return codigo;
