@@ -10,14 +10,21 @@ import java.util.List;
 import br.com.grupo4.mercadon.model.Carrinho;
 import br.com.grupo4.mercadon.model.PessoaFisica;
 
-//
+
 public class CarrinhoDAO {
+
 private final Connection conn;
 	
+
 	public CarrinhoDAO(Connection con) {
 		this.conn = con;
 	}
+<<<<<<< HEAD
 	//Inserir Carrinho nos favoritos?
+=======
+	
+	
+>>>>>>> branch 'master' of https://github.com/LuanFelipeW/MercadOn.git
 	public boolean inserir(Carrinho carrinho) throws SQLException{
 		String sql = "INSERT INTO CARRINHO (CAR_CODIGO, CAR_QUANTIDADE, CAR_VALOR_TOTAL, CAR_CLIENTE) VALUES (SEQ_CARRINHO.nextval, ?, ?, ?)";
 		 
@@ -50,12 +57,13 @@ private final Connection conn;
 		 
 		return statement.executeUpdate() > 0;
 	}
+	
 
 	public List<Carrinho> lista() throws SQLException {
 		List<Carrinho> lCarrinho = new ArrayList<>();
 
 		String sql = "SELECT CO.CAR_CODIGO, CO.CAR_QUANTIDADE, CO.CAR_VALOR_TOTAL, CO.CAR_CLIENTE";
-		sql += "CO.PEF_NOME";
+		sql += "PF.PEF_NOME";
 		sql += " FROM CARRINHO CO ";
 		sql += " INNER JOIN PESSOAFISICA PF ON (CO.CAR_CLIENTE = PF.PEF_CODIGO) ";
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
@@ -71,13 +79,9 @@ private final Connection conn;
 					Carrinho carrinho = new Carrinho(codigo, quantidade, valorTotal,pessoaFisica);
 					lCarrinho.add(carrinho);
 					
-					
 				}
 			}
 		}
-
 		return lCarrinho;
-		
-
 	}
 }

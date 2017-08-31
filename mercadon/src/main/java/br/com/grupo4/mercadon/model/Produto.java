@@ -31,6 +31,13 @@ public class Produto {
 		this.ofertas = ofertas;
 	}
 	
+	public Produto(int codigoProduto, String nomeProduto) {
+		
+		this.codigo = codigoProduto;
+		this.nome = nomeProduto;
+	
+	}
+
 	// GETTER E SETTER
 	public Integer getCodigo() {
 		return codigo;
