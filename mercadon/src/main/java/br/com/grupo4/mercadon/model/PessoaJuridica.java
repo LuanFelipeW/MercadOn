@@ -19,6 +19,14 @@ public class PessoaJuridica {
 	}
 	
 	
+	//DAO
+	public PessoaJuridica(int codigoJuridico, String nomeJuridico) {
+		this.codigo = codigoJuridico;
+		this.nomeFantasia = nomeJuridico;
+		
+	}
+
+
 	//GETTER E SETTER:
 	public Integer getCodigo() {
 		return codigo;

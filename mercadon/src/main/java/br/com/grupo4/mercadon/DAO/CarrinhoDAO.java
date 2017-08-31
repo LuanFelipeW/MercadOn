@@ -10,8 +10,9 @@ import java.util.List;
 import br.com.grupo4.mercadon.model.Carrinho;
 import br.com.grupo4.mercadon.model.PessoaFisica;
 
-//
+
 public class CarrinhoDAO {
+
 private final Connection conn;
 	
 	public CarrinhoDAO(Connection con) {
@@ -42,7 +43,7 @@ private final Connection conn;
 		List<Carrinho> lCarrinho = new ArrayList<>();
 
 		String sql = "SELECT CO.CAR_CODIGO, CO.CAR_QUANTIDADE, CO.CAR_VALOR_TOTAL, CO.CAR_CLIENTE";
-		sql += "CO.PEF_NOME";
+		sql += "PF.PEF_NOME";
 		sql += " FROM CARRINHO CO ";
 		sql += " INNER JOIN PESSOAFISICA PF ON (CO.CAR_CLIENTE = PF.PEF_CODIGO) ";
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
