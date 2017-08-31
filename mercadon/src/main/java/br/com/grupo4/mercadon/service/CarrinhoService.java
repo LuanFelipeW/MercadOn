@@ -26,14 +26,15 @@ public class CarrinhoService {
 }
 	
 	//Metodo para inserir produtos no carrinho --- arrumar
-     public void inserir(Carrinho carrinho) throws SQLException{
+     public void inserir(Produto produto) throws SQLException{
    		try (Connection con = new ConnectionPoolOracle().getConnection()) {
-   			definirProduto(carrinho);
-        		new CarrinhoDAO(con).inserir(carrinho);
+   			definirProduto(produto);
+        		new CarrinhoDAO(con).inserir(produto);
         		}
         	}
+     
      //Em Andamento
- 	private void definirProduto(Carrinho carrinho) throws SQLException {
+/* 	private void definirProduto(Produto produto) throws SQLException {
 		List<Produto> lProduto = new ProdutoService().listarProdutos();
 		for (Produto produto : lProduto) {
 			String prod = pessoa.getDtNascimento().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
@@ -43,9 +44,9 @@ public class CarrinhoService {
 				break;
 			}
 		}
-	}
+	}*/
 	
-		}
-	}
+		
+	
 }
   

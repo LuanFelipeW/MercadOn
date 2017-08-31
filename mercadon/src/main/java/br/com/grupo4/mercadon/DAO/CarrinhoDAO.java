@@ -17,6 +17,7 @@ private final Connection conn;
 	public CarrinhoDAO(Connection con) {
 		this.conn = con;
 	}
+	//Inserir Carrinho nos favoritos?
 	public boolean inserir(Carrinho carrinho) throws SQLException{
 		String sql = "INSERT INTO CARRINHO (CAR_CODIGO, CAR_QUANTIDADE, CAR_VALOR_TOTAL, CAR_CLIENTE) VALUES (SEQ_CARRINHO.nextval, ?, ?, ?)";
 		 
@@ -28,6 +29,18 @@ private final Connection conn;
 		return statement.executeUpdate() > 0;
 	}
 	
+	//Inserir produto no carrinho Arrumar---
+	
+/*	public boolean inserirProduto(Carrinho carrinho) throws SQLException{
+		String sql = "INSERT INTO CARRINHO (CAR_CODIGO, CAR_QUANTIDADE, CAR_VALOR_TOTAL, CAR_CLIENTE) VALUES (SEQ_CARRINHO.nextval, ?, ?, ?)";
+		 
+		PreparedStatement statement = conn.prepareStatement(sql);
+		statement.setInt(1, carrinho.getQuantidade());
+		statement.setDouble(2, carrinho.getPrecoTotal());
+		statement.setInt(3, carrinho.getPessoaFisica().getCodigo());
+		 
+		return statement.executeUpdate() > 0;
+	}*/
 	
 	public boolean apagar(Integer codigo) throws SQLException{
 		String sql = "DELETE CARRINHO WHERE CAR_CODIGO = ?";
