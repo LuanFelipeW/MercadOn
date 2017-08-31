@@ -33,7 +33,38 @@ public class Endereco {
 		this.pessoaFisica = pessoaFisica;
 	}
 	
-	
+
+	public Endereco(Integer codigo, String cep, String rua, String bairro, String numero, String cidade, String estado,
+			String telefone, String complemento, PessoaFisica pessoaFisica) {
+		super();
+		this.codigo = codigo;
+		this.cep = cep;
+		this.rua = rua;
+		this.bairro = bairro;
+		this.numero = numero;
+		this.cidade = cidade;
+		this.estado = estado;
+		this.telefone = telefone;
+		this.complemento = complemento;
+		this.pessoaFisica = pessoaFisica;
+	}
+
+
+	public Endereco(Integer codigo, String cep, String rua, String bairro, String numero, String cidade, String estado,
+			String telefone, PessoaJuridica pessoaJuridica) {
+		super();
+		this.codigo = codigo;
+		this.cep = cep;
+		this.rua = rua;
+		this.bairro = bairro;
+		this.numero = numero;
+		this.cidade = cidade;
+		this.estado = estado;
+		this.telefone = telefone;
+		this.pessoaJuridica = pessoaJuridica;
+	}
+
+
 	//GETTER E SETTER:
 	public Integer getCodigo() {
 		return codigo;

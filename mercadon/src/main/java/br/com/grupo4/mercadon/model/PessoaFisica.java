@@ -25,11 +25,22 @@ public class PessoaFisica {
 		this.pessoaJuridica = pessoaJuridica;
 	}
 
-	
+	//CONSTRUTOR - CarrinhoDAO
 	public PessoaFisica(int codigo, String nome) {
 		this.codigo = codigo;
 		this.nome = nome;
 	}
+
+	//CONSTRUTOR - EnderecoDAO
+	public PessoaFisica(int codigo, String nome2, String sobrenome2, String email2, Date dataNasc2, String sexo2) {
+	this.codigo = codigo;
+	this.nome = nome2;
+	this.sobrenome = sobrenome2;
+	this.email = email2;
+	this.dataNasc = dataNasc2;
+	this.sexo = sexo2;
+	}
+
 
 	// GETTER E SETTER
 	public Integer getCodigo() {
