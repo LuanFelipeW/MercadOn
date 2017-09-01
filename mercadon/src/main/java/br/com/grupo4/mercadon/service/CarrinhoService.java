@@ -11,29 +11,16 @@ import br.com.grupo4.mercadon.model.Produto;
 
 public class CarrinhoService {
 
-	//Metodo para listar todas as categorias
-	public List<Carrinho> listarSubCategorias() throws SQLException{
-		try (Connection con = new ConnectionPoolOracle().getConnection()) {
-            return new CarrinhoDAO(con).lista();
-		}
-	}
-	//Metodo para buscar todas as categorias --- arrumar
-	public List<Carrinho> buscarSubCategoria() throws SQLException{
-		try (Connection con = new ConnectionPoolOracle().getConnection()) {
-            return new CarrinhoDAO(con).lista();
-            
-}
-}
-	
 	//Metodo para inserir produtos no carrinho --- arrumar
-     public void inserir(Carrinho carrinho) throws SQLException{
+     public void inserir(Produto produto) throws SQLException{
    		try (Connection con = new ConnectionPoolOracle().getConnection()) {
-   			definirProduto(carrinho);
-        		new CarrinhoDAO(con).inserir(carrinho);
+   			definirProduto(produto);
+        		new CarrinhoDAO(con).inserir(produto);
         		}
         	}
+     
      //Em Andamento
- 	private void definirProduto(Carrinho carrinho) throws SQLException {
+/* 	private void definirProduto(Produto produto) throws SQLException {
 		List<Produto> lProduto = new ProdutoService().listarProdutos();
 		for (Produto produto : lProduto) {
 			String prod = pessoa.getDtNascimento().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
@@ -43,9 +30,15 @@ public class CarrinhoService {
 				break;
 			}
 		}
-	}
+	}*/
+     
+     //Metodo para apagar todos os itens do carrinho
+     public void apagar(Carrinho carrinho) throws SQLException{
+    	 
+    	 
+     }
+     	
+		
 	
-		}
-	}
 }
   

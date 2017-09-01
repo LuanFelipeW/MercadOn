@@ -20,7 +20,6 @@ private final Connection conn;
 		this.conn = con;
 	}
 	
-	
 	public boolean inserir(Carrinho carrinho) throws SQLException{
 		String sql = "INSERT INTO CARRINHO (CAR_CODIGO, CAR_QUANTIDADE, CAR_VALOR_TOTAL, CAR_CLIENTE) VALUES (SEQ_CARRINHO.nextval, ?, ?, ?)";
 		 
@@ -31,7 +30,6 @@ private final Connection conn;
 		 
 		return statement.executeUpdate() > 0;
 	}
-	
 	
 	public boolean apagar(Integer codigo) throws SQLException{
 		String sql = "DELETE CARRINHO WHERE CAR_CODIGO = ?";
