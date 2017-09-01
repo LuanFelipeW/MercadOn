@@ -18,7 +18,16 @@ public class Pedido {
 		this.carrinho = carrinho;
 	}
 	
+		
 	
+	public Pedido(int codigoPedido, Double valorTotal2) {
+		
+		this.codigo = codigoPedido;
+		this.valorTotal = valorTotal2;
+		
+	}
+
+
 	//GETTER E SETTER:
 	public Integer getCodigo() {
 		return codigo;
