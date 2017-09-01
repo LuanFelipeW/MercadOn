@@ -66,6 +66,7 @@ private final Connection conn;
 					//String carrinho = rs.getString(3);
 					Double valorTotal = rs.getDouble(4);
 					
+					////
 					Produto produto = new Produto();
 					
 					Carrinho carrinho = new Carrinho();
