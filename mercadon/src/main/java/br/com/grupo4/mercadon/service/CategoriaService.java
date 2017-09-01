@@ -11,13 +11,13 @@ import br.com.grupo4.mercadon.DAO.CategoriaDAO;
 public class CategoriaService {
 	
 	//Metodo para listar todas as categorias
-	public List<Categoria> listarSubCategorias() throws SQLException{
+	public List<Categoria> listarCategorias() throws SQLException{
 		try (Connection con = new ConnectionPoolOracle().getConnection()) {
             return new CategoriaDAO(con).lista();
 		}
 	}
 	//Metodo para buscar todas as categorias --- arrumar
-	public List<Categoria> buscarSubCategoria() throws SQLException{
+	public List<Categoria> buscarCategoria() throws SQLException{
 		try (Connection con = new ConnectionPoolOracle().getConnection()) {
             return new CategoriaDAO(con).lista();
             
