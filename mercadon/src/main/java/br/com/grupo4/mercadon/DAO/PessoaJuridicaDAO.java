@@ -60,5 +60,4 @@ public class PessoaJuridicaDAO {
 		}
 		return lPessoaJuridica;
 	}
-
 }
