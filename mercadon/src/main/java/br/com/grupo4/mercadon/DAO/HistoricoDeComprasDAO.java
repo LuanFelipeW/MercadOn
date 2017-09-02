@@ -108,7 +108,7 @@ private final Connection conn;
 						ProdutoCarrinho produtoCarrinho = new ProdutoCarrinho(produto, carrinho);
 						
 						setProdutoCarrinho.add(produtoCarrinho);
-						
+						////////
 					}
 					
 					carrinho.setSetProdutosCarrinhos(setProdutoCarrinho);
