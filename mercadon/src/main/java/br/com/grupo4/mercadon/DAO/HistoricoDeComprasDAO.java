@@ -58,14 +58,17 @@ private final Connection conn;
 		sql += "PD.PED_CODIGO, PD.PED_CARRINHO, PD.PED_VALOR";
 		sql += " FROM HISTORICODECOMPRAS HC";
 		sql += " INNER JOIN PEDIDO PD ON (HC.HDC_PEDIDO = PD.PED_CODIGO)";
+		sql += " INNER JOIN CARRINO CA ON (PD.PED_CARRINHO = CA.CAR_CODIGO)";
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			stmt.execute();
 			try (ResultSet rs = stmt.getResultSet()) {
 				while (rs.next()) {
-					int codigo = rs.getInt(1);
 					
+					int codigo = rs.getInt(1);
+
 					int codigoPedido = rs.getInt(2);
-					//String carrinho = rs.getString(3);
+					
+					
 					Double valorTotal = rs.getDouble(4);
 					
 					Carrinho carrinho = new Carrinho();
