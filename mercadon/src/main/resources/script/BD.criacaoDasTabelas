@@ -15,6 +15,7 @@ CREATE TABLE PESSOAJURIDICA (
 CREATE SEQUENCE SEQ_PESSOAJURIDICA
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -34,6 +35,7 @@ CREATE TABLE PESSOAFISICA (
 CREATE SEQUENCE SEQ_PESSOAFISICA
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -58,6 +60,7 @@ CREATE TABLE ENDERECO (
 CREATE SEQUENCE SEQ_ENDERECO
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 
 --------------------------------------------------------------------------------
@@ -72,6 +75,7 @@ CREATE TABLE PERFIL (
 CREATE SEQUENCE SEQ_PERFIL
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -90,6 +94,7 @@ CREATE TABLE USUARIO (
 CREATE SEQUENCE SEQ_USUARIO
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -103,6 +108,7 @@ CREATE TABLE CATEGORIA (
 CREATE SEQUENCE SEQ_CATEGORIA
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -118,6 +124,7 @@ CREATE TABLE SUBCATEGORIA (
 CREATE SEQUENCE SEQ_SUBCATEGORIA
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -132,6 +139,7 @@ CREATE TABLE OFERTAS (
 CREATE SEQUENCE SEQ_OFERTAS
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -156,6 +164,7 @@ CREATE TABLE PRODUTO (
 CREATE SEQUENCE SEQ_PRODUTO
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -177,6 +186,7 @@ CREATE TABLE COMENTARIO (
 CREATE SEQUENCE SEQ_COMENTARIO
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -193,6 +203,7 @@ CREATE TABLE CARRINHO (
 CREATE SEQUENCE SEQ_CARRINHO
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -209,6 +220,7 @@ CREATE TABLE PRODUTO_CARRINHO (
 CREATE SEQUENCE SEQ_PRODUTO_CARRINHO
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -222,6 +234,7 @@ CREATE TABLE STATUS (
 CREATE SEQUENCE SEQ_STATUS
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -239,6 +252,7 @@ CREATE TABLE PEDIDO (
 CREATE SEQUENCE SEQ_PEDIDO
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -254,6 +268,7 @@ CREATE TABLE FORMAPAGAMENTO (
 CREATE SEQUENCE SEQ_FORMAPAGAMENTO
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -268,6 +283,7 @@ CREATE TABLE HISTORICODECOMPRAS (
 CREATE SEQUENCE SEQ_HISTORICODECOMPRAS
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -282,6 +298,7 @@ CREATE TABLE FAVORITOS (
 CREATE SEQUENCE SEQ_FAVORITOS
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
 
@@ -298,5 +315,7 @@ CREATE TABLE MERCADOS_FAVORITOS (
 CREATE SEQUENCE SEQ_MERCADOS_FAVORITOS
 START WITH 1
 INCREMENT BY 1;
+COMMIT;
 
 --------------------------------------------------------------------------------
+COMMIT;
