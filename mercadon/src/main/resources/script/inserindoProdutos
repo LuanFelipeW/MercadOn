@@ -167,7 +167,7 @@ INSERT INTO PRODUTO (PRO_CODIGO, PRO_SUBCATEGORIA, PRO_PESSOAJURIDICA, PRO_NOME,
 VALUES (SEQ_PRODUTO.NextVal, 80, 1, 'Cera Brilho Fácil Incolor 750mL', 'Brilho Fácil', 'Cria Sim Produtos Higiene Ltda',10.97, '05/09/2017', '31/12/2017');
 COMMIT;
 
-
+s
 
 
 
