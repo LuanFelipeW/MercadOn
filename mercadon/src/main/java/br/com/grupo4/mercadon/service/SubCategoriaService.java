@@ -6,6 +6,7 @@ import java.util.List;
 
 import br.com.grupo4.mercadon.jdbc.oracle.ConnectionPoolOracle;
 import br.com.grupo4.mercadon.model.SubCategoria;
+import br.com.grupo4.mercadon.model.Categoria;
 import br.com.grupo4.mercadon.DAO.SubCategoriaDAO;
 
 
@@ -19,10 +20,11 @@ public class SubCategoriaService {
 		}
 	}
 	//Metodo para buscar todas as subcategorias --- arrumar
-	public List<SubCategoria> buscarSubCategoria() throws SQLException{
+
+	public List<SubCategoria> buscarSubCategorias() throws SQLException{
 		try (Connection con = new ConnectionPoolOracle().getConnection()) {
             return new SubCategoriaDAO(con).lista();
-            
-}
+		}
+	}
 }
 }
