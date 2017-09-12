@@ -27,7 +27,7 @@ public class CategoriaService {
 			}
 		}
 		
-		public void buscarSubCategoria() throws SQLException {
+		public void buscarSubCategoria(int txt) throws SQLException {
 			try (Connection con = new ConnectionPoolOracle().getConnection()) {
 				List<Categoria> categorias = new CategoriaDAO(con).lista();
 				for (Categoria categoria : categorias) {
