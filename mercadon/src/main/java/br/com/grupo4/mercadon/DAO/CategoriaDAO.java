@@ -8,11 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.grupo4.mercadon.model.Categoria;
+import br.com.grupo4.mercadon.model.Produto;
 
 public class CategoriaDAO {
 
 	private final Connection conn;
 
+	
 	public CategoriaDAO(Connection con) {
 		this.conn = con;
 	}
@@ -44,52 +46,30 @@ public class CategoriaDAO {
 
 		return statement.executeUpdate() > 0;
 	}
-//Metodo de listagem padrão
-	public List<Categoria> lista() throws SQLException {
-		List<Categoria> lCategoria = new ArrayList<>();
 
-		String sql = "SELECT * FROM CATEGORIA";
+	// Metodo de listagem de produtos baseando-se na categoria selecionada
+	public List<Produto> listarProSub(Integer entrada) throws SQLException {
+		List<Produto> lProduto = new ArrayList<>();
 
-		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-			stmt.execute();
-			try (ResultSet rs = stmt.getResultSet()) {
-				while (rs.next()) {
-					int codigo = rs.getInt("CAT_CODIGO");
-					String nome = rs.getString("CAT_NOME");
+		String sql = "SELECT PRO_NOME, PRO_PRECO FROM PRODUTO WHERE PRO_SUBCATEGORIA = ?";
 
-					Categoria categoria = new Categoria(codigo, nome);
-					lCategoria.add(categoria);
-
-				}
-			}
-		}
-		return lCategoria;
-
-	}
-//Metodo de listagem de produtos baseando-se na categoria selecionada
-	public List<Categoria> lista2(int entrada) throws SQLException {
-		List<Categoria> lCategoria = new ArrayList<>();
-
-		String sql = "SELECT ? FROM CATEGORIA";
-
-		PreparedStatement statement = conn.prepareStatement(sql);
-		statement.setInt(1, entrada);
 
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+			stmt.setInt(1, entrada);
 			stmt.execute();
 
 			try (ResultSet rs = stmt.getResultSet()) {
 				while (rs.next()) {
-					int codigo = rs.getInt("CAT_CODIGO");
-					String nome = rs.getString("CAT_NOME");
+					String nome = rs.getString("PRO_NOME");
+					Double preco = rs.getDouble("PRO_PRECO");
 
-					Categoria categoria = new Categoria(codigo, nome);
-					lCategoria.add(categoria);
+					Produto produto = new Produto(nome, preco);
+					lProduto.add(produto);
 
 				}
 			}
 		}
-		return lCategoria;
+		return lProduto;
 
 	}
 

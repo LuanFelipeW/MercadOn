@@ -30,12 +30,18 @@ public class Produto {
 		this.mercado = mercado;
 		this.ofertas = ofertas;
 	}
-	
+
 	public Produto(int codigoProduto, String nomeProduto) {
-		
+
 		this.codigo = codigoProduto;
 		this.nome = nomeProduto;
-	
+
+	}
+
+	public Produto(String nome2, Double preco2) {
+
+		this.nome = nome2;
+		this.preco = preco2;
 	}
 
 	// GETTER E SETTER

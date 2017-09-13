@@ -9,7 +9,7 @@ public static void main(String[] args) throws SQLException{
 	
 	CategoriaService cat = new CategoriaService();
 	
-	cat.buscarCategoria();
+	cat.buscarSubCategoriaProdutos(60);
 	
 	
 }
