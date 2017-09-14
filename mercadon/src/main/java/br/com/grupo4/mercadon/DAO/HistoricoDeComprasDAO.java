@@ -54,11 +54,11 @@ private final Connection conn;
 	public List<HistoricoDeCompras> lista() throws SQLException {
 		List<HistoricoDeCompras> lComentario = new ArrayList<>();
 
-		String sql = "SELECT HC.HDC_CODIGO";
-		sql += "PD.PED_CODIGO, PD.PED_CARRINHO, PD.PED_VALOR";
-		sql += " FROM HISTORICODECOMPRAS HC";
-		sql += " INNER JOIN PEDIDO PD ON (HC.HDC_PEDIDO = PD.PED_CODIGO)";
-		sql += " INNER JOIN CARRINO CA ON (PD.PED_CARRINHO = CA.CAR_CODIGO)";
+		String sql = "SELECT HC.HDC_CODIGO ";
+		sql += " PD.PED_CODIGO, PD.PED_CARRINHO, PD.PED_VALOR ";
+		sql += " FROM HISTORICODECOMPRAS HC ";
+		sql += " INNER JOIN PEDIDO PD ON (HC.HDC_PEDIDO = PD.PED_CODIGO) ";
+		sql += " INNER JOIN CARRINHO CA ON (PD.PED_CARRINHO = CA.CAR_CODIGO) ";
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			stmt.execute();
 			try (ResultSet rs = stmt.getResultSet()) {

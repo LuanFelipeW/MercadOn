@@ -14,7 +14,6 @@ public class CategoriaDAO {
 
 	private final Connection conn;
 
-	
 	public CategoriaDAO(Connection con) {
 		this.conn = con;
 	}
@@ -48,11 +47,12 @@ public class CategoriaDAO {
 	}
 
 	// Metodo de listagem de produtos baseando-se na categoria selecionada
-	public List<Produto> listarProSub(Integer entrada) throws SQLException {
+	public List<Produto> listarProCat(Integer entrada) throws SQLException {
 		List<Produto> lProduto = new ArrayList<>();
 
-		String sql = "SELECT PRO_NOME, PRO_PRECO FROM PRODUTO WHERE PRO_SUBCATEGORIA = ?";
-
+		String sql = "SELECT PRO_NOME, PRO_PRECO FROM PRODUTO ";
+		sql += " INNER JOIN SUBCATEGORIA ON (PRODUTO.PRO_SUBCATEGORIA = SUBCATEGORIA.SCA_CODIGO) ";
+		sql += " WHERE SCA_CATEGORIA = ? ";
 
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			stmt.setInt(1, entrada);
@@ -60,8 +60,8 @@ public class CategoriaDAO {
 
 			try (ResultSet rs = stmt.getResultSet()) {
 				while (rs.next()) {
-					String nome = rs.getString("PRO_NOME");
-					Double preco = rs.getDouble("PRO_PRECO");
+					String nome = rs.getString(1);
+					Double preco = rs.getDouble(2);
 
 					Produto produto = new Produto(nome, preco);
 					lProduto.add(produto);

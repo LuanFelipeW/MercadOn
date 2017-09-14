@@ -30,20 +30,13 @@ public class CategoriaService {
 			}
 		}
 	}
-	
-	
-			public void buscarSubCategoriaProdutos(Integer entrada) throws SQLException {
-				try (Connection con = new ConnectionPoolOracle().getConnection()) {
-					List<Produto> produtos = new CategoriaDAO(con).listarProSub(entrada);
-					for (Produto produto : produtos) {
-						System.out.println(produto.getNome() +"\n"+ df.format((produto.getPreco())));
+	// Metodo para mostrar todos os produtos de uma determinada categoria
+	public void buscarCategoriaProdutos(Integer entrada) throws SQLException {
+		try (Connection con = new ConnectionPoolOracle().getConnection()) {
+			List<Produto> produtos = new CategoriaDAO(con).listarProCat(entrada);
+			for (Produto produto : produtos) {
+				System.out.println(produto.getNome() + "\n" + df.format((produto.getPreco())));
+			}
 		}
 	}
-		}
-	}
-
-
-
-
-
-
+}
