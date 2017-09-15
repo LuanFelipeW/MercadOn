@@ -2,14 +2,16 @@ package br.com.grupo4.mercadon.service;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.text.DecimalFormat;
 import java.util.List;
 
 import br.com.grupo4.mercadon.jdbc.oracle.ConnectionPoolOracle;
 import br.com.grupo4.mercadon.model.Produto;
-import br.com.grupo4.mercadon.DAO.ProdutoDAO;;
+import br.com.grupo4.mercadon.DAO.ProdutoDAO;
+import br.com.grupo4.mercadon.DAO.SubCategoriaDAO;;
 
 public class ProdutoService {
-
+DecimalFormat df = new DecimalFormat("#0.00");
 
 	//metodo listagem de Produtos - como Filtro
 	public List<Produto> listarProdutos() throws SQLException{
@@ -18,10 +20,14 @@ public class ProdutoService {
 		}
 	}
 	//metodo busca de Produtos - como Pesquisa
-	public List<Produto> buscarProdutos() throws SQLException{
+	public void buscarListaProduto(String entrada) throws SQLException{
 		try (Connection con = new ConnectionPoolOracle().getConnection()) {
-            return new ProdutoDAO(con).lista();
+			List<Produto> produtos = new ProdutoDAO(con).buscarListaProduto(entrada);
+			for (Produto produto : produtos) {
+				System.out.println(produto.getNome() +"\n"+ df.format((produto.getPreco())));
             
 }
 }
+}
+	
 }
