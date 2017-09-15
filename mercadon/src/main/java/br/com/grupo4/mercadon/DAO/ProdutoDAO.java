@@ -1,5 +1,49 @@
 package br.com.grupo4.mercadon.DAO;
 
-public class ProdutoDAO {
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
+import br.com.grupo4.mercadon.model.Carrinho;
+import br.com.grupo4.mercadon.model.PessoaFisica;
+import br.com.grupo4.mercadon.model.Produto;
+
+public class ProdutoDAO {
+	
+	
+	private final Connection conn;
+
+	public SubCategoriaDAO(Connection con) {
+		this.conn = con;
+	}
+	
+
+	public List<Produto> buscarListaPro() throws SQLException {
+		List<Produto> lProduto = new ArrayList<>();
+
+		String sql = "SELECT CO.CAR_CODIGO, CO.CAR_QUANTIDADE, CO.CAR_VALOR_TOTAL, CO.CAR_CLIENTE";
+		sql += "PF.PEF_NOME";
+		sql += " FROM CARRINHO CO ";
+		sql += " INNER JOIN PESSOAFISICA PF ON (CO.CAR_CLIENTE = PF.PEF_CODIGO) ";
+		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+			stmt.execute();
+			try (ResultSet rs = stmt.getResultSet()) {
+				while (rs.next()) {
+					int codigo = rs.getInt(1);
+					int quantidade = rs.getInt(2);
+					double valorTotal = rs.getDouble(3);
+					int codigoPf =  rs.getInt(4);
+					String nomeCliente = rs.getString(5);
+					PessoaFisica pessoaFisica = new PessoaFisica(codigoPf,nomeCliente);
+					Carrinho carrinho = new Carrinho(codigo, quantidade, valorTotal,pessoaFisica);
+					lCarrinho.add(carrinho);
+					
+				}
+			}
+		}
+		return lCarrinho;
+	}
 }
