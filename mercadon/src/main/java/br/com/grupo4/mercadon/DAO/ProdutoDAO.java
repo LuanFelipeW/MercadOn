@@ -38,7 +38,7 @@ public class ProdutoDAO {
 		return lProduto;
 	}
 
-	public List<Produto> filtrarProdutoAZ(Integer entrada) throws SQLException {
+	public List<Produto> filtrarProduto(Integer entrada) throws SQLException {
 		List<Produto> lProduto = new ArrayList<>();
 
 		String sql = " SELECT PRO_NOME, PRO_PRECO ";
