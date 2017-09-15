@@ -38,14 +38,14 @@ public class ProdutoDAO {
 		return lProduto;
 	}
 
-	public List<Produto> filtrarProduto(Integer entrada) throws SQLException {
+	public List<Produto> filtrarProduto(String entrada) throws SQLException {
 		List<Produto> lProduto = new ArrayList<>();
 
 		String sql = " SELECT PRO_NOME, PRO_PRECO ";
 		sql += " FROM PRODUTO ";
 		sql += " ORDER BY ? ";
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-			stmt.setInt(1, entrada);
+			stmt.setString(1, entrada);
 			stmt.execute();
 			try (ResultSet rs = stmt.getResultSet()) {
 				while (rs.next()) {
