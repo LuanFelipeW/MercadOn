@@ -1,5 +1,11 @@
 package br.com.grupo4.mercadon.DAO;
 
-public class ProdutoDAO {
+import java.sql.Connection;
 
+public class ProdutoDAO {
+	private final Connection conn;
+
+	public CarrinhoDAO(Connection con) {
+		this.conn = con;
+	}
 }
