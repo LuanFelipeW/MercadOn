@@ -18,7 +18,9 @@ public class teste {
 		cat.buscarCategoriaProdutos(1);*/
 
 		ProdutoService pros = new ProdutoService();
-		pros.buscarListaProduto("bolo");
+		//pros.buscarListaProduto("bolo");
+		
+		pros.filtrosProduto(3);
 
 	}
 }
