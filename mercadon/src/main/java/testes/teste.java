@@ -8,13 +8,19 @@ import br.com.grupo4.mercadon.service.SubCategoriaService;
 public class teste {
 	public static void main(String[] args) throws SQLException {
 
-		SubCategoriaService cat = new SubCategoriaService();
-		cat.buscarSubCategoriaProdutos(60);
+		SubCategoriaService scat = new SubCategoriaService();
+		scat.buscarSubCategoriaProdutos(60);
 
-		
-	/*	CategoriaService cat = new CategoriaService();
+		System.out.println("|-----------------------------------------------------------------|");
 
-		cat.buscarCategoriaProdutos(1);*/
+		CategoriaService cat = new CategoriaService();
+		cat.buscarCategoriaProdutos(1);
+
+		/*
+		 * CategoriaService cat = new CategoriaService();
+		 * 
+		 * cat.buscarCategoriaProdutos(1);
+		 */
 
 	}
 }
