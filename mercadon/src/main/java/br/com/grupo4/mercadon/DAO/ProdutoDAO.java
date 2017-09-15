@@ -18,13 +18,14 @@ public class ProdutoDAO {
 	}
 	
 
-	public List<Produto> buscarListaProduto() throws SQLException {
+	public List<Produto> buscarListaProduto(String entrada) throws SQLException {
 		List<Produto> lProduto = new ArrayList<>();
 
-		String sql = " SELECT PRO_NOME, PRO_PRECO ";
+		String sql = "SELECT PRO_NOME, PRO_PRECO ";
 		sql += " FROM PRODUTO ";
-		sql += " WHERE UPPER(PRO_NOME) LIKE UPPER('%?%');";
+		sql += " WHERE UPPER(PRO_NOME) LIKE UPPER(?)";
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+			stmt.setString(1, "%" +entrada+ "%");
 			stmt.execute();
 			try (ResultSet rs = stmt.getResultSet()) {
 				while (rs.next()) {
