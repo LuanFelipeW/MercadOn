@@ -16,11 +16,13 @@ public class teste {
 
 		CategoriaService cat = new CategoriaService();
 		cat.buscarCategoriaProdutos(1);*/
+		
+		System.out.println("|-----------------------------------------------------------------|");
 
 		ProdutoService pros = new ProdutoService();
 		//pros.buscarListaProduto("bolo");
 		
-		pros.filtrosProduto(3);
+		pros.filtrosProduto(4);
 
 	}
 }

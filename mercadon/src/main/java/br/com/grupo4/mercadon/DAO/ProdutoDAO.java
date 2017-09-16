@@ -25,6 +25,7 @@ public class ProdutoDAO {
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			stmt.setString(1, "%" + entrada + "%");
 			stmt.execute();
+			
 			try (ResultSet rs = stmt.getResultSet()) {
 				while (rs.next()) {
 					String nome = rs.getString(1);
@@ -40,12 +41,12 @@ public class ProdutoDAO {
 
 	public List<Produto> filtrarProduto(String entrada) throws SQLException {
 		List<Produto> lProduto = new ArrayList<>();
-
 		String sql = " SELECT PRO_NOME, PRO_PRECO ";
 		sql += " FROM PRODUTO ";
-		sql += " ORDER BY ? ";
+		sql += " ORDER BY ";
+		sql += entrada;
+		
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
-			stmt.setString(1, entrada);
 			stmt.execute();
 			try (ResultSet rs = stmt.getResultSet()) {
 				while (rs.next()) {
