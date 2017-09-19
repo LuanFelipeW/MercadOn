@@ -20,7 +20,7 @@ public class teste {
 		ProdutoService pros = new ProdutoService();
 		//pros.buscarListaProduto("bolo");
 		
-		pros.filtrosProduto(3);
+		pros.filtrosProduto(1);
 
 	}
 }

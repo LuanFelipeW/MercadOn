@@ -20,6 +20,12 @@ public class Carrinho {
 		this.precoTotal = precoTotal;
 		this.pessoaFisica = pessoaFisica;
 	}
+	
+	// CONSTRUTOR - CarrinhoDAO
+	public Carrinho(int codigo, Double precoTotal) {
+		this.codigo = codigo;
+		this.precoTotal = precoTotal;
+	}
 
 	public Carrinho() {
 
