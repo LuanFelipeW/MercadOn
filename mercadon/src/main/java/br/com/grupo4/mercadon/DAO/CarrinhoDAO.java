@@ -5,10 +5,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import br.com.grupo4.mercadon.model.Carrinho;
+import br.com.grupo4.mercadon.model.HistoricoDeCompras;
 import br.com.grupo4.mercadon.model.PessoaFisica;
+import br.com.grupo4.mercadon.model.Produto;
+import br.com.grupo4.mercadon.model.ProdutoCarrinho;
 
 
 public class CarrinhoDAO {
@@ -20,6 +25,17 @@ private final Connection conn;
 		this.conn = con;
 	}
 	
+	public boolean inserirProdutoCarrinho(ProdutoCarrinho procarrinho) throws SQLException{
+		String sql = "INSERT INTO PRODUTO_CARRINHO (PRC_PRODUTO, PRC_CARRINHO) VALUES (1,10)";
+		
+		PreparedStatement statement = conn.prepareStatement(sql);
+		/*statement.setInt(1, procarrinho.getProduto());
+		statement.setInt(2, procarrinho.getCarrinho());*/
+		 
+		return statement.executeUpdate() > 0;
+	}
+	
+
 	public boolean inserir(Carrinho carrinho) throws SQLException{
 		String sql = "INSERT INTO CARRINHO (CAR_CODIGO, CAR_QUANTIDADE, CAR_VALOR_TOTAL, CAR_CLIENTE) VALUES (SEQ_CARRINHO.nextval, ?, ?, ?)";
 		 
