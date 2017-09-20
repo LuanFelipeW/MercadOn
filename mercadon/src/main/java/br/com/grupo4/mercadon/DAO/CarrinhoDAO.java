@@ -9,6 +9,7 @@ import java.util.List;
 
 import br.com.grupo4.mercadon.model.Carrinho;
 import br.com.grupo4.mercadon.model.PessoaFisica;
+import br.com.grupo4.mercadon.model.Produto;
 
 
 public class CarrinhoDAO {
@@ -19,6 +20,20 @@ private final Connection conn;
 	public CarrinhoDAO(Connection con) {
 		this.conn = con;
 	}
+	
+	public boolean inserirProdutoNoCarrinho(Carrinho carrinho) throws SQLException{
+		String sql = "INSERT INTO CARRINHO (CAR_CODIGO, CAR_QUANTIDADE, CAR_VALOR_TOTAL, CAR_CLIENTE) VALUES (SEQ_CARRINHO.nextval, ?, ?, ?)";
+		 
+		PreparedStatement statement = conn.prepareStatement(sql);
+		statement.setInt(1, carrinho.getQuantidade());
+		statement.setDouble(2, carrinho.getPrecoTotal());
+		statement.setInt(3, carrinho.getPessoaFisica().getCodigo());
+		 
+		return statement.executeUpdate() > 0;
+	}
+
+	
+	
 	
 	public boolean inserir(Carrinho carrinho) throws SQLException{
 		String sql = "INSERT INTO CARRINHO (CAR_CODIGO, CAR_QUANTIDADE, CAR_VALOR_TOTAL, CAR_CLIENTE) VALUES (SEQ_CARRINHO.nextval, ?, ?, ?)";
