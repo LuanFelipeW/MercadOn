@@ -3,12 +3,12 @@ package br.com.grupo4.mercadon.model;
 public class ProdutoCarrinho {
 
 	//ATRIBUTO:
-	private Integer produto;
-	private Integer carrinho;
+	private Produto produto;
+	private Carrinho carrinho;
 	
 	
 	//MÉTODO CONTRUTOR:
-	public ProdutoCarrinho(Integer produto, Integer carrinho) {
+	public ProdutoCarrinho(Produto produto, Carrinho carrinho) {
 		super();
 		this.produto = produto;
 		this.carrinho = carrinho;
@@ -21,16 +21,16 @@ public class ProdutoCarrinho {
 
 
 	//GETTER E SETTER:
-	public Integer getProduto() {
+	public Produto getProduto() {
 		return produto;
 	}
-	public void setProduto(Integer produto) {
+	public void setProduto(Produto produto) {
 		this.produto = produto;
 	}
-	public Integer getCarrinho() {
+	public Carrinho getCarrinho() {
 		return carrinho;
 	}
-	public void setCarrinho(Integer carrinho) {
+	public void setCarrinho(Carrinho carrinho) {
 		this.carrinho = carrinho;
 	}	
 }
