@@ -1,6 +1,6 @@
 package br.com.grupo4.mercadon.service;
 
-import java.sql.Connection;
+import java.sql.Connection; 
 import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.util.List;

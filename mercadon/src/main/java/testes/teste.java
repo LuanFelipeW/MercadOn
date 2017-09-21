@@ -27,7 +27,7 @@ public class teste {
 		pros.filtrosProduto(1);
 		pros.filtrosProduto(4);*/
 		
-		
+		/*
 		ProdutoCarrinho proc = new ProdutoCarrinho(1,1);
 		proc.setCarrinho(10);
 		proc.setProduto(1);
@@ -36,6 +36,9 @@ public class teste {
 		car.inserirProduto(proc);
 
 		System.out.println("|-----------------------------------------------------------------|");
+		*/
+		CategoriaService cats = new CategoriaService();
+		cats.listarCategorias();
 
 	}
 }

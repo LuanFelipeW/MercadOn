@@ -16,16 +16,16 @@ public class CategoriaService {
 	// Metodo para listar todas as categorias
 	public List<Categoria> listarCategorias() throws SQLException {
 		try (Connection con = new ConnectionPoolOracle().getConnection()) {
-			return new CategoriaDAO(con).lista();
+			return new CategoriaDAO(con).listaTodasCategorias();
 		}
 	}
 
 	// Metodo para buscar todas as categorias --- arrumar
 	public void buscarCategoria() throws SQLException {
 		try (Connection con = new ConnectionPoolOracle().getConnection()) {
-			List<Categoria> categorias = new CategoriaDAO(con).lista();
-			for (Categoria categoria : categorias) {
-				System.out.println(categoria.getNome());
+			List<Produto> produtos = new CategoriaDAO(con).listarProCat(3);
+			for (Produto produto : produtos) {
+				System.out.println(produto.getNome() + "\n" + df.format((produto.getPreco())));
 
 			}
 		}

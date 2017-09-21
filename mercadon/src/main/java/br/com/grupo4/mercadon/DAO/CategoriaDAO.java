@@ -9,6 +9,7 @@ import java.util.List;
 
 import br.com.grupo4.mercadon.model.Categoria;
 import br.com.grupo4.mercadon.model.Produto;
+import br.com.grupo4.mercadon.service.CategoriaService;
 
 public class CategoriaDAO {
 
@@ -72,5 +73,31 @@ public class CategoriaDAO {
 		return lProduto;
 
 	}
+	
+	// Metodo de listagem	 das categorias
+	public List<Categoria> listaTodasCategorias() throws SQLException {
+		List<Categoria> lCategoria = new ArrayList<>();
 
+		String sql = "SELECT CAT_NOME FROM CATEGORIA ";
+
+		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+			stmt.execute();
+
+			try (ResultSet rs = stmt.getResultSet()) {
+				while (rs.next()) {
+					Integer codigo = rs.getInt(1);
+					String nome = rs.getString(2);
+					Categoria categoria = new Categoria(codigo, nome);
+					lCategoria.add(categoria);
+
+				}
+			}
+		}
+		return lCategoria;
+
+	}
+
+	
+	
+	
 }
