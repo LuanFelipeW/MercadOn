@@ -93,10 +93,10 @@ private final Connection conn;
 	private void juncaoCarrinhoProduto(List<HistoricoDeCompras> lista){
 
 		String sql = "SELECT HC.HDC_CODIGO";
-		sql += "PD.PED_CODIGO, PD.PED_CARRINHO, PD.PED_VALOR";
+		sql += " PD.PED_CODIGO, PD.PED_CARRINHO, PD.PED_VALOR";
 		sql += " FROM PRODUTO_CARRINHO HC";
 		sql += " INNER JOIN PEDIDO PD ON (HC.HDC_PEDIDO = PD.PED_CODIGO)";
-				sql +="WHERE CODIGO_CARRINHO = ?";
+		sql += " WHERE CODIGO_CARRINHO = ?";
 				
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			for (HistoricoDeCompras historicoDeCompras : lista) {

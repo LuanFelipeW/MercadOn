@@ -1,6 +1,6 @@
 package br.com.grupo4.mercadon.service;
 
-import java.sql.Connection;
+import java.sql.Connection; 
 import java.sql.SQLException;
 import java.util.List;
 
@@ -8,26 +8,22 @@ import br.com.grupo4.mercadon.DAO.CarrinhoDAO;
 import br.com.grupo4.mercadon.jdbc.oracle.ConnectionPoolOracle;
 import br.com.grupo4.mercadon.model.Carrinho;
 import br.com.grupo4.mercadon.model.Produto;
+import br.com.grupo4.mercadon.model.ProdutoCarrinho;
 
 public class CarrinhoService {
 
 	//Metodo para inserir produtos no carrinho --- arrumar
-     public void inserir(Produto produto) throws SQLException{
+     public void inserirProduto(ProdutoCarrinho procarrinho) throws SQLException{
    		try (Connection con = new ConnectionPoolOracle().getConnection()) {
-   			definirProduto(produto);
-        		new CarrinhoDAO(con).inserir(produto);
+        		new CarrinhoDAO(con).inserirProdutoCarrinho(procarrinho);
         		}
         	}
      
      //Em Andamento
-/* 	private void definirProduto(Produto produto) throws SQLException {
-		List<Produto> lProduto = new ProdutoService().listarProdutos();
-		for (Produto produto : lProduto) {
-			String prod = pessoa.getDtNascimento().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
-			if((dtNascimento.getMonthValue() == signo.getMesInicial() && dtNascimento.getDayOfMonth() >= signo.getDiaInicial())
-					|| (dtNascimento.getMonthValue() == signo.getMesFinal() && dtNascimento.getDayOfMonth() <= signo.getDiaFinal())){
-				pessoa.setSigno(signo);
-				break;
+    /* public void produtoCarrinho(Produto produto) throws SQLException{
+    		try (Connection con = new ConnectionPoolOracle().getConnection()) {
+    			definirProduto(produto);
+         		new CarrinhoDAO(con).produtoCarrinho(produto);
 			}
 		}
 	}*/
