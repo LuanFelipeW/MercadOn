@@ -54,6 +54,9 @@ public class teste {
 	}
 }
 
+/*21/09/2017
+	Arrumei as Classes - CategoriaDAO, CategoriaService, arrumei o método para retornar todas as categorias (listar).
+		Fazendo teste. */
 
 
 
