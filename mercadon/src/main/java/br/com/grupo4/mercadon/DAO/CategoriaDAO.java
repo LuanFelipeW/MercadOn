@@ -39,7 +39,7 @@ public class CategoriaDAO {
 	}
 
 	public boolean apagar(Integer codigo) throws SQLException {
-		String sql = "DELETE CATEGORIA WHERE CAT_CODIGO = ?";
+		String sql = " DELETE CATEGORIA WHERE CAT_CODIGO = ? ";
 
 		PreparedStatement statement = conn.prepareStatement(sql);
 		statement.setInt(1, codigo);
