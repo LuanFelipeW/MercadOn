@@ -5,6 +5,8 @@ import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.util.List;
 
+import javax.swing.plaf.synth.SynthSeparatorUI;
+
 import br.com.grupo4.mercadon.jdbc.oracle.ConnectionPoolOracle;
 import br.com.grupo4.mercadon.model.Categoria;
 import br.com.grupo4.mercadon.model.Produto;
@@ -20,6 +22,7 @@ public class CategoriaService {
 		}
 	}
 
+
 	// Metodo para buscar todas as categorias --- arrumar
 	public void buscarCategoria() throws SQLException {
 		try (Connection con = new ConnectionPoolOracle().getConnection()) {
@@ -30,6 +33,7 @@ public class CategoriaService {
 			}
 		}
 	}
+
 	// Metodo para mostrar todos os produtos de uma determinada categoria
 	public void buscarCategoriaProdutos(Integer entrada) throws SQLException {
 		try (Connection con = new ConnectionPoolOracle().getConnection()) {

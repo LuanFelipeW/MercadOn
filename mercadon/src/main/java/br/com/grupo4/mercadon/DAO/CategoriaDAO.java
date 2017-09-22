@@ -78,7 +78,7 @@ public class CategoriaDAO {
 	public List<Categoria> listaTodasCategorias() throws SQLException {
 		List<Categoria> lCategoria = new ArrayList<>();
 
-		String sql = "SELECT CAT_NOME FROM CATEGORIA ";
+		String sql = "SELECT CAT_CODIGO, CAT_NOME FROM CATEGORIA ";
 
 		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			stmt.execute();

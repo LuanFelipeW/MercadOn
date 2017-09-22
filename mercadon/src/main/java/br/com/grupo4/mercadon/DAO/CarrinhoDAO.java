@@ -36,21 +36,13 @@ private final Connection conn;
 
 	
 	
-	public boolean inserirProdutoCarrinho(ProdutoCarrinho procarrinho) throws SQLException{
-		String sql = "INSERT INTO PRODUTO_CARRINHO (PRC_PRODUTO, PRC_CARRINHO) VALUES (1,10)";
-		
-		PreparedStatement statement = conn.prepareStatement(sql);
-		/*statement.setInt(1, procarrinho.getProduto());
-		statement.setInt(2, procarrinho.getCarrinho());*/
-		 
-		return statement.executeUpdate() > 0;
-	}
 	
 
 	public boolean inserir(Carrinho carrinho) throws SQLException{
 		String sql = "INSERT INTO CARRINHO (CAR_CODIGO, CAR_QUANTIDADE, CAR_VALOR_TOTAL, CAR_CLIENTE) VALUES (SEQ_CARRINHO.nextval, ?, ?, ?)";
 		 
 		PreparedStatement statement = conn.prepareStatement(sql);
+		
 		statement.setInt(1, carrinho.getQuantidade());
 		statement.setDouble(2, carrinho.getPrecoTotal());
 		statement.setInt(3, carrinho.getPessoaFisica().getCodigo());

@@ -12,7 +12,7 @@ import br.com.grupo4.mercadon.model.ProdutoCarrinho;
 
 public class CarrinhoService {
 
-	//Metodo para inserir produtos no carrinho --- arrumar
+	//Metodo para adicionar carrinhos --- arrumar
      public void inserirProduto(ProdutoCarrinho procarrinho) throws SQLException{
    		try (Connection con = new ConnectionPoolOracle().getConnection()) {
         		new CarrinhoDAO(con).inserirProdutoCarrinho(procarrinho);
