@@ -18,7 +18,7 @@ public class MercadoFavoritosDAO {
 		String sql = "INSERT INTO MERCADOS_FAVORITOS (FAV_CODIGO, FAV_HISTORICODECOMPRAS) VALUES (SEQ_FAVORITOS.nextval,?)";
 
 		PreparedStatement statement = conn.prepareStatement(sql);
-		statement.setInt(1, Favoritos.;
+		statement.setInt(1, Favoritos.
 
 		return statement.executeUpdate() > 0;
 	}

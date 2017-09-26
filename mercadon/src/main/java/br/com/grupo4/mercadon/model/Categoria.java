@@ -13,7 +13,13 @@ public class Categoria {
 		this.codigo = codigo;
 		this.nome = nome;
 	}
+	
+	public Categoria(String nomeCategoria) {
+		super();
+		this.nome = nomeCategoria;
+	}
 
+	
 	// GETTER E SETTER
 	public Integer getCodigo() {
 		return codigo;

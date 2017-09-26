@@ -12,8 +12,9 @@ public class SubCategoria {
 		this.codigo = codigo;
 		this.categoria = categoria;
 		this.nome = nome;
-
 	}
+	
+	
 
 	// GETTER E SETTER
 	public Integer getCodigo() {
