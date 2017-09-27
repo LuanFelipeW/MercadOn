@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <link href="../css/bootstrap.min.css" rel="stylesheet"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="../imgs/favicon.ico" />
+    <link href="estilos.css" rel="stylesheet">
+
+</head>
+<body data-ng-app="MercadonApp">
+
+<div class="jumbotron">
+    <div class="row">
+        <div class="col-md-8" data-ng-repeat="produto in controller.produtos">
+            <p>{{produto.nome}}</p>
+            <p>{{produto.preco}}</p>
+            <p>{{1+2}}</p>
+        </div>
+    </div>
+</div>
+
+<script src="produto.js"></script>
+<script src="../js/angular.js"></script>
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>

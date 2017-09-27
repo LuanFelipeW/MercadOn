@@ -1,0 +1,199 @@
+@charset "UTF-8";
+
+/* CONFIGURAÇÃO MENU TOPO*/
+
+.my-navbar1{
+    background: rgba(34, 251, 23, 0.5);
+}
+
+#cadastro{
+    margin-top: 20px;
+    margin-left: 4%;
+    float: left;
+    position: relative;
+}
+
+.modalCadastro {
+    margin: auto;
+    width: 70%;
+    height: auto;
+}
+
+
+.logo-topo img{
+    margin-top: -5px;
+}
+
+/*  PLANO DE FUNDO DA PÁGINA -CORPO*/
+.plano-de-fundo {
+    background: url(../imgs/fundo.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height: 1530px;
+}
+
+/* CONFIGURAÇÃO DAS IMAGENS DO CAROUSEL -CABEÇALHO*/
+.imagem img {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height: 100%;
+}
+
+/*CONFIGURAÇÃO DAS DIMENSÕES DO CAROUSEL*/
+#carousel-example-generic{
+    width: 77.4%;
+    margin-left: 11.3%;
+    margin-top: 50px;
+}
+
+/* FUNDO TRANSPARENTE -SEÇÃO*/
+.fundo-branco-transparente{
+	height: 900px;
+	background-color: white;
+	opacity: 0.8;
+	margin: 0% 12% 0% 12.5% ;
+    z-index: 1;
+    position: relative;
+}
+
+/* FUNDO RODAPÉ*/
+.rodape{
+    height: 170px;
+    background-image: linear-gradient(360deg, green, white);;
+    position: relative;
+    margin-left: 12.5%;
+    border-top-width: 40px;
+    border-top: dashed #37342f 1px;
+
+}
+
+.artigo img{
+    width: 150px;
+    position:relative;
+    margin: 10px 5px 0 22px;
+}
+
+.artigos-produtos{
+    opacity: 1;
+}
+
+/*ARTIGOS MODELO ERRADO (DEMONSTRATIVO)*/
+.artigo img{
+    width: 150px;
+    position:relative;
+    margin: 10px 5px 0 22px;
+}
+
+.artigos-produtos{
+    opacity: 1;
+}
+
+.artigo{
+    margin-left: 5%;
+    margin-top: 15px;
+    height: 100px;
+    background-color: #ffffff;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    border-radius: 40px;
+    border: dashed #9d9d9d 1px;
+}
+
+.texto-artigo{
+    text-align: center;
+    padding: 0px;
+}
+.artigo:hover {
+    background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(199,235,206,1.00) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(199,235,206,1.00) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(199,235,206,1.00) 100%);
+    background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(199,235,206,1.00) 100%);
+    border: solid #5cb85c 1px;
+
+}
+
+
+.artigo02{
+    margin-left: 35%;
+    margin-top: 15px;
+    height: 100px;
+    background-color: #ffffff;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    border-radius: 40px;
+    border: dashed #9d9d9d 1px;
+}
+
+.texto-artigo{
+    text-align: center;
+    padding: 0px;
+}
+.artigo02:hover {
+    background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(199,235,206,1.00) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(199,235,206,1.00) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(199,235,206,1.00) 100%);
+    background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(199,235,206,1.00) 100%);
+    border: solid #5cb85c 1px;
+
+}
+
+.artigo02 img{
+    position:relative;
+    margin: 10px 0px 0px 59px;
+    height: 124px;
+
+}
+
+.artigos-produtos{
+    opacity: 1;
+}
+
+
+.artigo03{
+    margin-left: 65%;
+    margin-top: 15px;
+    height: 100px;
+    background-color: #ffffff;
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    border-radius: 40px;
+    border: dashed #9d9d9d 1px;
+}
+
+.texto-artigo{
+    text-align: center;
+    padding: 0px;
+}
+.artigo03:hover {
+    background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(199,235,206,1.00) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(199,235,206,1.00) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 0%,rgba(199,235,206,1.00) 100%);
+    background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 0%,rgba(199,235,206,1.00) 100%);
+    border: solid #5cb85c 1px;
+
+}
+
+.artigo03 img{
+    position:relative;
+    margin: 10px 0px 0px 59px;
+    height: 124px;
+
+}
+
+.artigos-produtos{
+    opacity: 1;
+}
+
+.bairro {
+    margin: 15px auto 15px 5px;
+}
+
+
+
+
