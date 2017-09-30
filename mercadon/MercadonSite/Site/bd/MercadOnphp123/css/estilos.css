@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+/* CONFIGURAÇÃO MENU TOPO*/
+
+.my-navbar1{
+    background: rgba(34, 251, 23, 0.5);
+}
+
+#cadastro{
+    margin-top: 20px;
+    margin-left: 4%;
+    float: left;
+    position: relative;
+}
+
+.setor_principal_cadastro{
+    height: 600px;
+}
+.logo-topo img{
+    margin-top: -5px;
+}
+
+/*  PLANO DE FUNDO DA PÁGINA -CORPO*/
+.plano-de-fundo {
+    background: url(../imgs/fundo.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+	height: 1530px;
+}
+
+/* CONFIGURAÇÃO DAS IMAGENS DO CAROUSEL -CABEÇALHO*/
+.imagem img {
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    height: 100%;
+}
+
+/*CONFIGURAÇÃO DAS DIMENSÕES DO CAROUSEL*/
+#carousel-example-generic{
+    width: 77.4%;
+    margin-left: 11.3%;
+    margin-top: 50px;
+}
+
+/* FUNDO TRANSPARENTE -SEÇÃO*/
+.fundo-branco-transparente{
+	height: 900px;
+	background-color: white;
+	opacity: 0.8;
+	margin: 0 12% 0 12.5% ;
+    z-index: 1;
+    position: relative;
+}
+
+/* FUNDO RODAPÉ*/
+.rodape{
+    height: 170px;
+    background-image: linear-gradient(360deg, green, white);;
+    position: relative;
+    margin-left: 12.5%;
+    border-top: dashed #37342f 1px;
+
+}
+
+
+.bairro {
+    margin: 15px;
+}
+
+/*PHP*/
+
+.fundoresposta{
+    width: 30%;
+    height: 350px;
+    border-radius: 5px;
+    border: dashed #9d9d9d 1px;
+    margin: auto 24px auto auto;
+    text-align: center;
+    display: block;
+    float: left;
+
+
+}
+
+#resproduto{
+    color: #9d9d9d;
+    font-size: 15px;
+    position: relative;
+    margin-top: 45px;
+}
+
+#respreco{
+    color: #985f0d;
+    font-size: 16px;
+}
+
+#resmercado{
+    color: #0f0f0f;
+    font-weight: bold;
+
+}
+
+.fundoresposta:hover{
+    border: solid #9d9d9d 1px;
+    background-image: -webkit-linear-gradient(270deg,rgba(255,255,255,1.00) 31.61%,rgba(151,229,206,1.00) 100%);
+    background-image: -moz-linear-gradient(270deg,rgba(255,255,255,1.00) 31.61%,rgba(151,229,206,1.00) 100%);
+    background-image: -o-linear-gradient(270deg,rgba(255,255,255,1.00) 31.61%,rgba(151,229,206,1.00) 100%);
+    background-image: linear-gradient(180deg,rgba(255,255,255,1.00) 31.61%,rgba(151,229,206,1.00) 100%);
+
+}
+
+.titulo{
+    background-color: #b2dba1;
+    height: 25px;
+    width: auto;
+    margin: 5px auto 5px auto;
+    border-radius: 2px;
+    text-align: center;
+}
+.titulo h4{
+    padding-top: 4px;
+    padding-left: 2px;
+}
+
+/*CARRINHO DE COMPRA*/
+
+.tabelacarrinho{
+    width: 80%;
+    margin: 100px;
+}
+
+#total{
+    font-size: 10pt;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+#totalvalor{
+    font-size: 15pt;
+    font-weight: bold;
+}
