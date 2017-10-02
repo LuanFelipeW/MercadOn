@@ -15,7 +15,7 @@ public class CarrinhoService {
 	//Metodo para adicionar carrinhos --- arrumar
      public void inserirProduto(ProdutoCarrinho procarrinho) throws SQLException{
    		try (Connection con = new ConnectionPoolOracle().getConnection()) {
-        		new CarrinhoDAO(con).inserirProdutoCarrinho(procarrinho);
+        		//new CarrinhoDAO(con).inserirProdutoCarrinho(procarrinho);
         		}
         	}
      

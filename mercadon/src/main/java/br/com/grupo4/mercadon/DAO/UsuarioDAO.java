@@ -38,9 +38,10 @@ private final Connection conn;
 		 
 		return statement.executeUpdate() > 0;
 	}
+}
 	
 
-	public List<Usuario> lista() throws SQLException {
+	/*public List<Usuario> lista() throws SQLException {
 		List<Usuario> lUsuario = new ArrayList<>();
 
 		String sql = "SELECT US.USU_CODIGO, US.USU_USUARIO, US.USU_SENHA, US.USU_PESSOAFISICA, US.USU_PERFIL";
@@ -65,10 +66,10 @@ private final Connection conn;
 					String email = rs.getString(8);
 					
 					int codigoPER = rs.getInt(5);
-					String tipoPer = rs.getString(9);
+					//String tipoPer = rs.getString(9);
 					
 					
-					PessoaFisica pessoaFisica = new PessoaFisica(codigoPf,nomeCliente);
+					/*PessoaFisica pessoaFisica = new PessoaFisica(codigoPf,nomeCliente);
 					Carrinho carrinho = new Carrinho(codigo, quantidade, valorTotal,pessoaFisica);
 					lCarrinho.add(carrinho);
 					
@@ -76,6 +77,5 @@ private final Connection conn;
 			}
 		}
 		return lUsuario;
-	}
-}
-}
+	}*/
+

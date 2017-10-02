@@ -98,7 +98,7 @@ private final Connection conn;
 		sql += " INNER JOIN PEDIDO PD ON (HC.HDC_PEDIDO = PD.PED_CODIGO)";
 		sql += " WHERE CODIGO_CARRINHO = ?";
 				
-		try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+		/*try (PreparedStatement stmt = conn.prepareStatement(sql)) {
 			for (HistoricoDeCompras historicoDeCompras : lista) {
 				Carrinho carrinho = historicoDeCompras.getPedido().getCarrinho();
 				stmt.setInt(1, carrinho.getCodigo());
@@ -106,18 +106,18 @@ private final Connection conn;
 				try (ResultSet rs = stmt.getResultSet()) {
 					Set<ProdutoCarrinho> setProdutoCarrinho = new HashSet<>();
 					while (rs.next()) {
-						Produto produto = new Produto();
+						//Produto produto = new Produto();
 						
-						ProdutoCarrinho produtoCarrinho = new ProdutoCarrinho(produto, carrinho);
+						//ProdutoCarrinho produtoCarrinho = new ProdutoCarrinho(produto, carrinho);
 						
-						setProdutoCarrinho.add(produtoCarrinho);
+						//setProdutoCarrinho.add(produtoCarrinho);
 						////////
 					}
 					
 					carrinho.setSetProdutosCarrinhos(setProdutoCarrinho);
 				}
 			}
-		}
+		}*/
 	
 	}
 }

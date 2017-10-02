@@ -14,13 +14,13 @@ public class MercadoFavoritosDAO {
 		this.conn = con;
 	}
 	
-	public boolean adicionarMercado(MercadoFavoritos mfavoritos) throws SQLException {
-		String sql = "INSERT INTO MERCADOS_FAVORITOS (FAV_CODIGO, FAV_HISTORICODECOMPRAS) VALUES (SEQ_FAVORITOS.nextval,?)";
+	//public boolean adicionarMercado(MercadoFavoritos mfavoritos) throws SQLException {
+	//	String sql = "INSERT INTO MERCADOS_FAVORITOS (FAV_CODIGO, FAV_HISTORICODECOMPRAS) VALUES (SEQ_FAVORITOS.nextval,?)";
 
-		PreparedStatement statement = conn.prepareStatement(sql);
-		statement.setInt(1, Favoritos.
+		//PreparedStatement statement = conn.prepareStatement(sql);
+		//statement.setInt(1, Favoritos.
 
-		return statement.executeUpdate() > 0;
-	}
+		//return statement.executeUpdate() > 0;
+	//}
 	
 }

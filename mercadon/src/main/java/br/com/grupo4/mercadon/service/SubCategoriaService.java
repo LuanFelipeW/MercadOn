@@ -16,18 +16,18 @@ public class SubCategoriaService {
 
 	
 	//Metodo para listar todas as subcategorias
-	public List<SubCategoria> listarSubCategorias() throws SQLException{
-		try (Connection con = new ConnectionPoolOracle().getConnection()) {
-            return new SubCategoriaDAO(con).listarProSub(listarSubCategorias());
-		}
-	}
+	//public List<SubCategoria> listarSubCategorias() throws SQLException{
+		//try (Connection con = new ConnectionPoolOracle().getConnection()) {
+           // return new SubCategoriaDAO(con).listarProSub(listarSubCategorias());
+		///
+	//}
 	//Metodo para buscar todas as subcategorias --- arrumar
 
-	public List<SubCategoria> buscarSubCategorias() throws SQLException{
-		try (Connection con = new ConnectionPoolOracle().getConnection()) {
-            return new SubCategoriaDAO(con).lista();
-		}
-	}
+	//public List<SubCategoria> buscarSubCategorias() throws SQLException{
+		//try (Connection con = new ConnectionPoolOracle().getConnection()) {
+           //return new SubCategoriaDAO(con).//lista();
+		//}
+	//}
 	public void buscarSubCategoriaProdutos(Integer entrada) throws SQLException {
 		try (Connection con = new ConnectionPoolOracle().getConnection()) {
 			List<Produto> produtos = new SubCategoriaDAO(con).listarProSub(entrada);
