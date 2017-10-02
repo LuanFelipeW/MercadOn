@@ -13,9 +13,7 @@
     position: relative;
 }
 
-.setor_principal_cadastro{
-    height: 600px;
-}
+
 .logo-topo img{
     margin-top: -5px;
 }
@@ -49,7 +47,7 @@
 .fundo-branco-transparente{
 	height: 900px;
 	background-color: white;
-	opacity: 0.8;
+	opacity: 0.95;
 	margin: 0 12% 0 12.5% ;
     z-index: 1;
     position: relative;
@@ -57,17 +55,24 @@
 
 /* FUNDO RODAPÉ*/
 .rodape{
-    height: 170px;
-    background-image: linear-gradient(360deg, green, white);;
-    position: relative;
-    margin-left: 12.5%;
+    height: 70px;
+    background-color: #c1e2b3;
     border-top: dashed #37342f 1px;
-
+    margin:auto auto auto 12.5%;
+    width: 75%;
+    border-radius: 0 0 5px 5px;
+    text-align: center;
 }
 
 
+.modalCadastro {
+    margin: auto;
+    width: 70%;
+    height: auto;
+}
+
 .bairro {
-    margin: 15px;
+    margin: 15px auto 15px 5px;
 }
 
 /*PHP CARRINHO*/
@@ -86,10 +91,11 @@
 }
 
 #resproduto{
-    color: #9d9d9d;
+    color: #3c3c3c;
     font-size: 15px;
     position: relative;
     margin-top: 25px;
+    font-weight: bold;
 }
 
 #respreco{
@@ -157,34 +163,52 @@
 
 
 /*FORMA PAGAMENTO*/
-.topicospagamento{
+#imagem-pgmto{
+    margin: 0 auto !important;
+    margin-top: 20px;
+
+}
+
+.conteudo-forma-pagamento{
+    background-color: #3c3c3c;
+}
+
+.pgto{
+    background-color: #cccccc;
+    height: 40%;
+    margin-top: 2%;
+    border-radius: 10px;
+    border: dotted #2aabd2 1px;
+}
+
+.entrega{
+    color: #d58512;
+    font-weight: bold;
+}
+
+.pagamento4{
     width: 100%;
-    height: 280px;
-    background-color: #c8e5bc;
+    height: 40%;
+    background-color: #cccccc;
+    margin-top: 2%;
+    border-radius: 10px;
+    border: dotted #2aabd2 1px;
     display: block;
-    float: left;
-    margin-top: 5px;
-    border-radius: 5px;
+
 }
 
-.topicospagamento h3{
-    font-weight: bold;
-    color: #ec971f;
-    margin-left: 20px;
+.oselect{
+    margin-top: 20%;
 }
-.topicospagamento h4{
-    font-weight: bold;
-    color: #1b6d85;
-    font-size: 12pt;
-    margin-left: 80px;
-}
-
-#obs{
-
-    font-weight: bold;
+.infocartao{
+    margin-top: 40%;
+    height: 45%;
+    background-color: #cccccc;
+    display: block;
+    border-radius: 10px;
 }
 
-#botaoavista{
-    margin-right: 20px;
-    margin-top: -20px;
+.conteudopagamento{
+    margin-top: 2%;
+
 }

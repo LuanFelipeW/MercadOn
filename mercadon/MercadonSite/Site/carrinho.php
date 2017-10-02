@@ -73,9 +73,10 @@ if(isset($_GET['acao'])){
 <table class="table table-hover tabelacarrinho">
     <tr class="titulomenu">
         <td width="88" align="center">Produto</td>
+        <td width="88" align="center">Supermercados</td>
         <td width="88" align="center">Imagem</td>
         <td width="134" align="center">Quantidade</td>
-        <td width="77" align="center">Preco</td>
+        <td width="77" align="center">Preço</td>
         <td width="65" align="center">Subtotal</td>
         <td width="147" align="center">Remover</td>
     </tr>
@@ -99,6 +100,8 @@ if(isset($_GET['acao'])){
 
         $imagens = $res['imagem'];
 
+        $mercado = $res['SUPERMERCADO'];
+
         $preco = number_format($res['PRECO'],2,',', '.');
 
         $sub = number_format($res['PRECO']* $quantidade,2,',', '.');
@@ -108,6 +111,7 @@ if(isset($_GET['acao'])){
               ?>
             <tr>
                 <td align="center"><?php echo $nome ?></td>
+                <td align="center" style="color: #985f0d; font-weight: bolder"><?php echo $mercado ?></td>
                 <td align="center"><?php echo "<img style='width: 50px;' src='".$res['imagem']."'>";?></td>
                 <?php echo  "<td align='center'><input type='text' size='3' name='prod[$id]' value='$quantidade'/></td>" ?>
                 <td align="center"><?php  echo $preco ?></td>
@@ -125,9 +129,9 @@ if(isset($_GET['acao'])){
 
         <td><button a class="btn btn-warning" href="#" role="button"><span class="glyphicon glyphicon-refresh"> Atualizar</span></button></td>
 
-        <td id="total" colspan="4" align="right">TOTAL</td>
+        <td id="total" colspan="5" align="right">TOTAL</td>
         <td id="totalvalor" align="center"><?php echo 'R$ '.$total ?></td>
-        <tr><td colspan="1" align="left"><a class="btn btn-warning" href="index.php" role="button">VOLTAR PARA LOJA</a></form></td><td colspan="5" align="right"><?php echo('<form action="finalizar-pedido.php" method="post">'); ?>
+        <tr><td colspan="2" align="left"><a class="btn btn-warning" href="index.php" role="button">VOLTAR PARA LOJA</a></form></td><td colspan="6" align="right"><?php echo('<form action="finalizar-pedido.php" method="post">'); ?>
         <?php echo('<input type="hidden" name="vtotal" value="'. $total .'" />'); ?>
         <?php echo "<input class='btn btn-success' type='submit' value='FINALIZAR PEDIDO'>"; ?>
         <?php echo "</form>"; ?></td></tr>

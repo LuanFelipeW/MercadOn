@@ -125,35 +125,36 @@ $con = mysqli_query($conn,$procurabd)
 
                 <li><a href="#">Mercearia</a>
                     <ul>
-                        <li><a href="#">Açúcar</a></li>
-                        <li><a href="#">Azeites, vinagres e olhos</a></li>
-                        <li><a href="#">Biscoitos</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=acucar">Açúcar</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=ole">Azeites e óleos</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=biscoito">Biscoitos</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=leite">Leites</a></li>
+                        <li><a href="#">Gelatinas, Misturas para Bolos & Cia.</a></li>
                         <li><a href="#">Cestas</a></li>
                         <li><a href="#">Chocolates, doces e salgadinhos</a></li>
                         <li><a href="#">Conservas e enlatados</a></li>
                         <li><a href="#">Cremes de Leite e Leites Condensados</a></li>
                         <li><a href="#">Frutas Cecas e Castanhas</a></li>
-                        <li><a href="#">Gelatinas, Misturas para Bolos & Cia.</a></li>
-                        <li><a href="#">Leites e Bebidas Lácteas</a></li>
+
+
                     </ul>
                 </li>
                 <li><a href="#">Bebibas</a>
                     <ul>
-                        <li><a href="#">Cervejas</a></li>
-                        <li><a href="#">Águas de Coco</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=cerveja">Cervejas</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=agua">Águas</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=refrigerante">Refrigerantes</a></li>
                         <li><a href="#">Chás e Mates</a></li>
-                        <li><a href="#">Águas</a></li>
                         <li><a href="#">Energéticos e Isotônicos</a></li>
                         <li><a href="#">Orgânicas</a></li>
                         <li><a href="#">Orientais</a></li>
-                        <li><a href="#">Refrigerantes</a></li>
                         <li><a href="#">Vinhos e Espumantes</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Carnes</a>
                     <ul>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=carne">Bovinos</a></li>
                         <li><a href="#">Aves</a></li>
-                        <li><a href="#">Bovinos</a></li>
                         <li><a href="#">Carnes Exóticas</a></li>
                         <li><a href="#">Linguiças</a></li>
                         <li><a href="#">Peixes e Frutos do Mar</a></li>
@@ -162,29 +163,29 @@ $con = mysqli_query($conn,$procurabd)
                 </li>
                 <li><a href="#">Frios</a>
                     <ul>
-                        <li><a href="#">Congelados</a></li>
-                        <li><a href="#">Embutidos e Defumados</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=margarina">Manteigas, Margarinas e Requeijões</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=pizza">Congelados</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=fatia">Embutidos e Defumados</a></li>
                         <li><a href="#">Iogurtes e Sobremesas</a></li>
-                        <li><a href="#">Manteigas, Margarinas e Requeijões</a></li>
                         <li><a href="#">Massas Frescas</a></li>
                         <li><a href="#">Pães e Bolos Congelados</a></li>
                         <li><a href="#">Queijos</a></li>
-                        <li><a href="#">Sucos Refrigerados</a></li>
                     </ul>
                 </li>
                 <li><a href="#">Hortifruti</a>
                     <ul>
-                        <li><a href="#">Frutas</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=fruta">Frutas</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=alface">Alface</a></li>
+                        <li><a href="#">Verduras</a></li>
                         <li><a href="#">Legumes</a></li>
                         <li><a href="#">Orgânicos</a></li>
-                        <li><a href="#">Ovos</a></li>
-                        <li><a href="#">Verduras</a></li>
+
                     </ul>
                 </li>
                 <li><a href="#">Padaria</a>
                     <ul>
-                        <li><a href="#">Biscoitos e Rosquinhas</a></li>
-                        <li><a href="#">Bolos e Confeitaria</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=biscoito">Biscoitos e Rosquinhas</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=bolo">Bolos e Confeitaria</a></li>
                         <li><a href="#">Pães</a></li>
                         <li><a href="#">Pães de Queijo</a></li>
                         <li><a href="#">Panetones</a></li>
@@ -193,10 +194,10 @@ $con = mysqli_query($conn,$procurabd)
                 </li>
                 <li><a href="#">Perfumaria</a>
                     <ul>
-                        <li><a href="#">Absorventes e Higiene Íntima</a></li>
-                        <li><a href="#">Algodões, Hastes Flexíveis e Curativos</a></li>
-                        <li><a href="#">Barba e Depilação</a></li>
-                        <li><a href="#">Desodorantes</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=absorve">Absorventes e Higiene Íntima</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=cot">Algodões, Hastes Flexíveis e Curativos</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=desodorante">Desodorantes</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=xampu">Xampu</a></li>
                         <li><a href="#">Fraldas Geriátricas</a></li>
                         <li><a href="#">Higiene Oral</a></li>
                         <li><a href="#">Infantil e Fraldas</a></li>
@@ -207,12 +208,13 @@ $con = mysqli_query($conn,$procurabd)
                 </li>
                 <li><a href="#">Limpeza</a>
                     <ul>
-                        <li><a href="#">Inseticidas e Repelentes</a></li>
-                        <li><a href="#">Para a Área de Serviço</a></li>
-                        <li><a href="#">Para a Cozinha</a></li>
-                        <li><a href="#">Para as Roupas e Sapatos</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=lava">Para Toda a Casa</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=limpador">Limpador</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=amaciante">Amaciante</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=inseticida">Inseticidas</a></li>
+                        <li><a href="http://127.0.0.1/Site/php/resultado.php?procura=repelente">Repelente</a></li>
                         <li><a href="#">Para o Banheiro</a></li>
-                        <li><a href="#">Para Toda a Casa</a></li>
+
                     </ul>
                 </li>
             </ul>
@@ -280,7 +282,7 @@ $con = mysqli_query($conn,$procurabd)
 
     <div class="modal fade" tabindex="-1" role="dialog" id="modal_cadastrar">
         <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
+            <div class="modal-content modalCadastro">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h4 class="modal-title">Cadastro</h4>
@@ -299,6 +301,16 @@ $con = mysqli_query($conn,$procurabd)
                             <label for="exampleInputEmail4">Email</label>
                             <input type="email" class="form-control" id="exampleInputEmail4" placeholder="seuemail@provedor">
                         </div>
+                        <div class="row">
+                            <div class="form-group col-md-5">
+                                <label for="exampleInputPassword2">Senha</label>
+                                <input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label for="exampleInputPassword3">Confirme Sua Senha</label>
+                                <input type="password" class="form-control" id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="exampleInputName5">Data de nascimento</label>
                             <input type="datetime-local" class="form-control" id="exampleInputName5" placeholder="Jane Doe">
@@ -311,11 +323,11 @@ $con = mysqli_query($conn,$procurabd)
                         </div>
                         <div class="checkbox">
                             <label>
-                                <input type="radio"  name="inlineRadioOptions" id="inlineRadio2" value="option2">Feminino
+                                <input type="radio"  name="inlineRadioOptions" id="inlineRadio2" value="option2"> Feminino
                             </label>
                         </div>
                         <div class="row">
-                            <div class="col-xs-2">
+                            <div class="col-xs-3">
                                 <label for="cep">CEP</label>
                                 <input type="text" class="form-control" id="cep" placeholder="00000-000" maxlength="9" size="10" >
                             </div>
@@ -323,15 +335,27 @@ $con = mysqli_query($conn,$procurabd)
                                 <label for="rua">Rua</label>
                                 <input type="text" class="form-control" id="rua" placeholder="Ex: Nereu Ramos" >
                             </div>
-                            <div class="col-sm-3 col-md-2 col-xs-4">
+                            <div class="col-sm-4 col-md-3 col-xs-5">
                                 <label for="num">Número</label>
                                 <input type="text" class="form-control" id="num" placeholder="Ex: 9999" >
                             </div>
                         </div>
                         <div class="row bairro">
-                            <div class="col-xs-6">
+                            <div class="col-xs-7">
                                 <label for="bairro">Bairro</label>
                                 <input type="text" class="form-control" id="bairro" placeholder="Ex: Centro" >
+                            </div>
+                            <div class="form-group col-xs-5">
+                                <label for="cidade">Cidade</label>
+                                <input type="text" class="form-control" id="cidade" placeholder="Rio de Janeiro">
+                            </div>
+                            <div class="form-group col-xs-8">
+                                <label for="estado">Estado</label>
+                                <input type="text" class="form-control" id="estado" placeholder="Ex: Santa Catarina">
+                            </div>
+                            <div class="form-group col-xs-4">
+                                <label for="complem">Complemento</label>
+                                <input type="text" class="form-control" id="complem" placeholder="Ex: Ap. 501">
                             </div>
                         </div>
 
@@ -339,7 +363,7 @@ $con = mysqli_query($conn,$procurabd)
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-success">Salvar</button>
+                    <button type="button" class="btn btn-success">Cadastrar-se</button>
                 </div>
             </div>
         </div>
@@ -348,9 +372,11 @@ $con = mysqli_query($conn,$procurabd)
 
 
 
-    <footer class="conteudo-rodape">
+    <footer>
         <div class="row">
-            <div class="col-md-9 rodape"></div>
+            <div class="rodape">
+                <p id="rodapenome"><br/><strong>Mercadon, proibido a copia parcial ou completa, 2017</strong></p>
+            </div>
         </div>
     </footer>
 
